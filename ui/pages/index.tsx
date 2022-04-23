@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 				</div>
 				<div className='pt-5'>
 					<Link href="/signup">
-						<PrimaryBtn onClick={()=>{}}>Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
+						<PrimaryBtn classes="flex items-center" onClick={()=>{}}>Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
 					</Link>
 				</div>
 			</div>
