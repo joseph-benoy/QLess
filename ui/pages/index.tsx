@@ -5,12 +5,17 @@ import styles from '../styles/Home.module.css'
 import { BiRightArrowAlt } from "react-icons/bi";
 import HeaderNav from '../layouts/header';
 import { PrimaryBtn } from '../components/Buttons';
+import Link from 'next/link';
 
 
 const Home: NextPage = () => {
 
   return (
     <>
+		<Head>
+			<title>QLess | Home</title>
+			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		</Head>
       <header>
         <HeaderNav/>
       </header>
@@ -26,7 +31,9 @@ const Home: NextPage = () => {
 					</p>
 				</div>
 				<div className='pt-5'>
-					<PrimaryBtn onClick={()=>{}}>Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
+					<Link href="/signup">
+						<PrimaryBtn onClick={()=>{}}>Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
+					</Link>
 				</div>
 			</div>
 			<div className='lg:col-span-5 lg:col-span-6'>
