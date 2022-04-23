@@ -6,11 +6,12 @@ function HeaderNav() {
         collapse!.classList.toggle("hidden");
         collapse!.classList.toggle("flex");
       };
+      const style= {fontSize:"2rem !important"}
     return ( 
         <nav className="bg-white py-2 md:py-4">
         <div className="container px-4 mx-auto md:flex md:items-center">
           <div className="flex justify-between items-center">
-            <a href="#" className="font-bold text-xl text-indigo-600">QLess</a>
+            <a href="#" className="font-bold text-xl text-indigo-600" style={style}>QLess</a>
             <button onClick={toggleNavMenu} className="border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden" id="navbar-toggle">
               <BiMenu/>
             </button>

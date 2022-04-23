@@ -15,8 +15,8 @@ const Home: NextPage = () => {
         <HeaderNav/>
       </header>
       <main>
-        <div className='grid grid-cols-1 lg:grid-cols-12'>
-			<div className='lg:col-span-6 sm:col-span-12 px-16 flex  flex-col justify-center '>
+        <div className='container grid grid-cols-1 lg:grid-cols-12 content-center'>
+			<div className='lg:col-span-7 sm:col-span-12 px-20 flex  flex-col justify-center '>
 				<div>
 					<h1 className='font-bold text-6xl text-indigo-600'>Events that drive growth start here</h1>
 				</div>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 					<PrimaryBtn onClick={()=>{}}>Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
 				</div>
 			</div>
-			<div className='lg:col-span-6 lg:col-span-6'>
+			<div className='lg:col-span-5 lg:col-span-6'>
 				<Image src='/hero/qless_hero.png' width={600} height={500} alt='qless event booking'/>
 			</div>
         </div>
