@@ -132,10 +132,6 @@ export default function SignUp (props: ISignUpProps) {
 							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password"/>
 							<div className="text-sm text-gray-500 mt-1">Text helper</div>
 							</div>
-							<div className="form-floating mb-3 xl:w-max grid grid-cols-1 place-content-end">
-								<div className=''>
-								</div>
-							</div>
 							
 						</div>
 						<PrimaryBtn onClick={()=>{}}>Sign Up</PrimaryBtn>
