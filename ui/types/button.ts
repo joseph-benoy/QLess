@@ -1,5 +1,6 @@
 import React from "react"
 export interface Button {
-    childern:React.ReactNode | string,
+    children:React.ReactNode,
     onClick:(e?:React.MouseEvent<HTMLElement>)=>void
+    type?:string
 }
