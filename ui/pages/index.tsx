@@ -36,8 +36,8 @@ const Home: NextPage = () => {
 					</Link>
 				</div>
 			</div>
-			<div className='lg:col-span-5 lg:col-span-6'>
-				<Image src='/hero/qless_hero.png' width={600} height={500} alt='qless event booking'/>
+			<div className='lg:col-span-5 '>
+				<Image src='/hero/hero1.png' width={600} height={500} alt='qless event booking'/>
 			</div>
         </div>
       </main>
