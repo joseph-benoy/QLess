@@ -11,14 +11,14 @@ function HeaderNav() {
       };
       const router = useRouter();
     return ( 
-        <nav className="bg-white py-2 md:py-4">
+        <nav className="bg-white py-5 md:py-4">
         <div className="container px-4 mx-auto md:flex md:items-center">
           <div className="flex justify-between items-center">
             <Link href='/'>
-            	<a className="font-bold text-xl text-indigo-600">QLess</a>
+            	<span className="font-bold text-3xl text-indigo-600">QLess</span>
             </Link>
-            <button onClick={toggleNavMenu} className="border border-solid border-gray-600 px-3 py-1 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden" id="navbar-toggle">
-              <BiMenu/>
+            <button onClick={toggleNavMenu} className="border border-solid border-indigo-600 px-3 py-2 rounded text-gray-600 opacity-50 hover:opacity-75 md:hidden" id="navbar-toggle">
+              <BiMenu className="text-indigo-600"/>
             </button>
           </div>
           <div className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0" id="navbar-collapse">

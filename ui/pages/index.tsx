@@ -21,11 +21,11 @@ const Home: NextPage = () => {
       </header>
       <main>
         <div className='container grid grid-cols-1 lg:grid-cols-12 content-center'>
-			<div className='lg:col-span-7 sm:col-span-12 px-20 flex  flex-col justify-center '>
+			<div className='lg:col-span-7 sm:col-span-12 px-5 lg:px-20 flex  flex-col justify-center pt-4'>
 				<div>
-					<h1 className='font-bold text-6xl text-indigo-600'>Events that drive growth start here</h1>
+					<h1 className='lg:text-6xl font-bold md:text-3xl text-5xl text-indigo-600'>Events that drive growth start here</h1>
 				</div>
-				<div className='pr-16 pl-1 pt-5 text-lg text-slate-600'>
+				<div className='lg:pr-16 pr-0 pl-1 pt-5 text-lg text-slate-500 lg:text-slate-600'>
 					<p>
 						Streamline how you manage event calendars and bookings plus clients, sales and billings with our all-in-one event scheduling software
 					</p>
