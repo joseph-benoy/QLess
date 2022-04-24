@@ -7,6 +7,7 @@ import {AiOutlineEye} from 'react-icons/ai';
 import useTogglePassword from '../hooks/useTogglePassword';
 export interface ILoginProps {
 }
+import Link from 'next/link';
 
 export default function Login (props: ILoginProps) {
     const [passRef,togglePassword] = useTogglePassword();
@@ -16,7 +17,7 @@ export default function Login (props: ILoginProps) {
           <HeaderNav/>
       </header>
       <main>
-		  <div  className="flex justify-center">
+		  <div  className="grid justify-center items-center mt-10">
           <div className='rounded-lg grid grid-cols-2 lg:w-max shadow-2xl  h-min pr-16 gap-12'>
               <div className='rounded-l-lg w-96 pb-10 bg-indigo-600'>
 				<div >
@@ -24,7 +25,9 @@ export default function Login (props: ILoginProps) {
 					<h2 className='text-3xl font-bold text-white text-center'>New member?</h2>
 					<p className='text-xl text-white  text-center mt-1'>Create an account now for free</p>
                     <div className=' flex justify-center items-center pt-2'> 
-                        <LightBtn>Sign Up</LightBtn>
+                        <Link href='/signup'>
+                            <LightBtn>Sign Up</LightBtn>
+                        </Link>
                     </div>
                 </div>
               </div>
