@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 				</div>
 				<div className='pt-5'>
 					<Link href="/signup">
-						<PrimaryBtn classes="flex items-center" onClick={()=>{}}>Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
+						<PrimaryBtn classes="flex items-center">Get started<BiRightArrowAlt size={30}/></PrimaryBtn>
 					</Link>
 				</div>
 			</div>
@@ -45,4 +45,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Home;

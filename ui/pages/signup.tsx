@@ -3,11 +3,16 @@ import HeaderNav from '../layouts/header';
 import Head from 'next/head';
 import Image from 'next/image';
 import { PrimaryBtn } from '../components/Buttons';
-
+import {AiOutlineEye} from 'react-icons/ai';
+import useTogglePassword from '../hooks/useTogglePassword';
+import PasswordToggle from '../components/Form/PasswordToggle';
 export interface ISignUpProps {
 }
 
 export default function SignUp (props: ISignUpProps) {
+	const [passRef,togglePassword] = useTogglePassword();
+	const [passRef2,togglePassword2] = useTogglePassword();
+
   return (
     <div>
         <Head>
@@ -95,43 +100,57 @@ export default function SignUp (props: ISignUpProps) {
 							<div className="text-sm text-gray-500 mt-1">Text helper</div>
 							</div>
 							<div className="form-floating mb-3 xl:w-96">
-							<label  className="text-gray-700">Password</label>
-							<input type="password" className="form-control
-							block
-							w-full
-							px-3
-							py-1.5
-							text-base
-							font-normal
-							text-gray-700
-							bg-white bg-clip-padding
-							border border-solid border-gray-300
-							rounded
-							transition
-							ease-in-out
-							m-0
-							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password"/>
-							<div className="text-sm text-gray-500 mt-1">Text helper</div>
-							</div>
-							<div className="form-floating mb-3 xl:w-96">
-							<label  className="text-gray-700">Confirm password</label>
-							<input type="password" className="form-control
-							block
-							w-full
-							px-3
-							py-1.5
-							text-base
-							font-normal
-							text-gray-700
-							bg-white bg-clip-padding
-							border border-solid border-gray-300
-							rounded
-							transition
-							ease-in-out
-							m-0
-							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password"/>
-							<div className="text-sm text-gray-500 mt-1">Text helper</div>
-							</div>
+                                <label  className="text-gray-700">Password</label>
+                                <div className="relative w-full">
+                                    
+                                <input type="password" ref={passRef2} className="form-control
+                                block
+                                w-full
+                                px-3
+                                py-1.5
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-white bg-clip-padding
+                                border border-solid border-gray-300
+                                rounded
+                                transition
+                                ease-in-out
+                                m-0
+                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password"/>
+                                
+                                <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+									<PasswordToggle toggleCb={togglePassword2}/>
+                                </div>
+                                </div>
+                                <div className="text-sm text-gray-500 mt-1">Text helper</div>
+                                </div>
+                                <div className="form-floating mb-3 xl:w-96">
+                                <label  className="text-gray-700">Confirm password</label>
+                                <div className="relative w-full">
+                                    
+                                <input type="password" ref={passRef} className="form-control
+                                block
+                                w-full
+                                px-3
+                                py-1.5
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-white bg-clip-padding
+                                border border-solid border-gray-300
+                                rounded
+                                transition
+                                ease-in-out
+                                m-0
+                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Re-type password"/>
+                                
+                                <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+									<PasswordToggle toggleCb={togglePassword}/>
+                                </div>
+                                </div>
+                                <div className="text-sm text-gray-500 mt-1">Text helper</div>
+                                </div>
 							
 						</div>
 						<PrimaryBtn onClick={()=>{}}>Sign Up</PrimaryBtn>
