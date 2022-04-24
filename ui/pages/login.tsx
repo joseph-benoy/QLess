@@ -18,8 +18,8 @@ export default function Login (props: ILoginProps) {
       </header>
       <main>
 		  <div  className="grid justify-center items-center mt-10">
-          <div className='rounded-lg grid grid-cols-2 lg:w-max shadow-2xl  h-min pr-16 gap-12'>
-              <div className='rounded-l-lg w-96 pb-10 bg-indigo-600'>
+          <div className='rounded-lg grid grid-cols-1 lg:grid-cols-2 lg:w-max lg:shadow-2xl  h-min pr-16 gap-12'>
+              <div className='rounded-l-lg w-96 pb-10 bg-indigo-600 hidden lg:block'>
 				<div >
 					<Image src="/signup/signup1.png" width={500} height={350}/>
 					<h2 className='text-3xl font-bold text-white text-center'>New member?</h2>
@@ -31,17 +31,18 @@ export default function Login (props: ILoginProps) {
                     </div>
                 </div>
               </div>
-              <div className='w-max py-10'>
+              <div className='w-max py-7 lg:py-10'>
 				<form>
-					<div className="grid justify-center">
+					<div className="grid justify-center px-8 lg:px-0">
 						<div>
-                            <h1 className='text-2xl font-bold text-center text-indigo-600 mb-2'>Login</h1>
+                            <h1 className='text-3xl lg:text-2xl font-bold text-center text-indigo-600 mb-2'>Login</h1>
                                 <div className="form-floating mb-3 xl:w-96">
                                     <label  className="text-gray-700">Email address</label>
                                     <input type="email" className="form-control
                                     block
                                     w-full
                                     px-3
+                                    pr-16
                                     py-1.5
                                     text-base
                                     font-normal
@@ -85,7 +86,7 @@ export default function Login (props: ILoginProps) {
                             </div>
 						    <PrimaryBtn onClick={()=>{}}>Sign Up</PrimaryBtn>
 						</div>
-                        <div className="form-floating mb-3 xl:w-96 mt-3 flex ">
+                        <div className="form-floating mb-3 xl:w-96 mt-3 flex px-8 lg:px-0">
                             <div className="form-check">
                                 <label className="inline-flex items-center">
                                     <input type="checkbox" className="w-4 h-4 border-0 focus:ring-0"  />

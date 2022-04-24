@@ -29,7 +29,7 @@ function HeaderNav() {
 				<a className={router.pathname==='/signup'?linkTypes.active:linkTypes.inActive}>Signup</a>
             </Link>
 			<Link href='/login'>
-				<a className={(router.pathname==='/login'?linkTypes.active:linkTypes.inActive)+' border border-solid border-indigo-600'}>Login</a>
+				<a className={(router.pathname==='/login'?linkTypes.active:linkTypes.inActive)+' lg:border lg:border-solid lg:border-indigo-600'}>Login</a>
 			</Link>
 		  </div>
         </div>

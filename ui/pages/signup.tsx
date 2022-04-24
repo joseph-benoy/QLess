@@ -34,7 +34,7 @@ export default function SignUp (props: ISignUpProps) {
               </div>
               <div className='w-max py-0 lg:py-5'>
 				<form>
-					<div className="grid justify-center px-7 lg:px-0">
+					<div className="grid justify-center px-8 lg:px-0">
 						
 						<div>
 						<h1 className='text-2xl font-bold text-center text-indigo-600 mb-2'>Sign Up</h1>
