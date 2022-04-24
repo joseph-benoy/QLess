@@ -84,7 +84,9 @@ export default function Login (props: ILoginProps) {
                                 </div>
 
                             </div>
-						    <PrimaryBtn onClick={()=>{}}>Sign Up</PrimaryBtn>
+                            <Link href='/user/1520'>
+						        <PrimaryBtn onClick={()=>{}}>Sign Up</PrimaryBtn>
+                            </Link>
 						</div>
                         <div className="form-floating mb-3 xl:w-96 mt-3 flex px-8 lg:px-0">
                             <div className="form-check">
