@@ -24,17 +24,17 @@ export default function SignUp (props: ISignUpProps) {
       </header>
       <main>
 		  <div  className="flex justify-center">
-          <div className='rounded-lg grid grid-cols-2 lg:w-max shadow-2xl  h-min pr-16 gap-12'>
-              <div className='rounded-l-lg w-96 pt-10 bg-indigo-600'>
+          <div className='rounded-lg grid grid-cols-1 lg:grid-cols-2 lg:w-max lg:shadow-2xl  h-min pr-16 gap-12'>
+              <div className='rounded-l-lg w-96 pt-10 bg-indigo-600 hidden lg:block'>
 				<div>
 					<Image src="/signup/signup1.png" width={500} height={350}/>
 					<h2 className='text-5xl font-bold text-white text-center'>QLess</h2>
 					<p className='text-xl text-white  text-center mt-3'>Memorable events don't just happen. They happen to be our business</p>
 				</div>
               </div>
-              <div className='w-max py-5'>
+              <div className='w-max py-0 lg:py-5'>
 				<form>
-					<div className="grid justify-center">
+					<div className="grid justify-center px-7 lg:px-0">
 						
 						<div>
 						<h1 className='text-2xl font-bold text-center text-indigo-600 mb-2'>Sign Up</h1>
@@ -45,7 +45,8 @@ export default function SignUp (props: ISignUpProps) {
 								<input type="text" className="form-control
 								block
 								w-full
-								px-3
+								pl-3
+								pr-14
 								py-1.5
 								text-base
 								font-normal
