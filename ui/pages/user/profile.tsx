@@ -8,6 +8,13 @@ export interface IOverViewProps {
 }
 
 export default function OverView (props: IOverViewProps) {
+	const [avatarTemp,setAvatarTemp] = React.useState();
+	const setAvatar = (event:React.ChangeEvent<HTMLInputElement>)=>{
+		if (event!.target.files && event!.target.files[0]) {
+			//@ts-ignore
+			setAvatarTemp(URL.createObjectURL(event.target.files[0]));
+		  }
+	}
   return (
 	<Dashboard>
 		<Head>
@@ -21,7 +28,10 @@ export default function OverView (props: IOverViewProps) {
 		<form>
 			<div className='flex justify-center'>
 				<div>
-					<Image src={`/avatars/male1.svg`} width={100} height={100} />
+					<label htmlFor='avatar'>
+						<Image src={avatarTemp?avatarTemp:`/avatars/male1.svg`} className='rounded-full' width={100} height={100} />
+					</label>
+					<input type="file" accept="image/png, image/jpeg,image/jpg" id='avatar' hidden onChange={setAvatar}/> 
 				</div>
 			</div>
 			<div className='grid grid-cols-6 place-items-center'>
