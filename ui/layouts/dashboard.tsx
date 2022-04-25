@@ -30,14 +30,14 @@ export default function Dashboard (props: IDashboardProps) {
                 <Link href='/user'>
                     <a className='flex justify-center flex-col items-center text-center text-xl font-bold text-green-500'>
                         <Image src="/logo/logo2.png" height={160} width={160} className='ml-3'/>
-                        <p className='-mt-5'>QLess</p>
+                        <p className='-mt-5 pl-5'>Q-Less</p>
                     </a>
                 </Link>
             </div>
             <hr/>
             <div>
                 <ul>
-                    <DashLink href='/user' active={(router.pathname==='/user')}><BiHome/>Home</DashLink>
+                    <DashLink href='/user' active={(router.pathname==='/user')}><BiHome/>Overview</DashLink>
                     <DashLink href='/user/popular'  active={(router.pathname==='/user/popular')}><BiWorld/>Popular</DashLink>
                     <hr/>
                     <DashLink href='/user/host' active={(router.pathname==='/user/host')}><MdOutlinePersonAdd/>Host</DashLink>
