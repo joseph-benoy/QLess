@@ -3,7 +3,7 @@ import {IoIosLogOut} from "react-icons/io";
 import {BsPersonCircle,BsPersonBadge} from "react-icons/bs";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {BiHome, BiMenu} from "react-icons/bi";
+import {BiHome} from "react-icons/bi";
 import DashLink from '../components/NavLink/DashLink';
 import { BiWorld } from 'react-icons/bi';
 import Image from 'next/image';
@@ -26,10 +26,10 @@ export default function Dashboard (props: IDashboardProps) {
   return (
     <div className='grid grid-cols-12'>
         <div className={`${!sideBar?"hidden":"block"} h-screen border col-span-2 shadow-xl transition duration-300 ease-out`}>
-            <div className='pt-2 pb-6 '>
+            <div className='pt-0 pb-6 '>
                 <Link href='/user'>
-                    <a className='flex justify-center flex-col items-center text-center text-xl font-bold text-indigo-600'>
-                        <Image src="/logo/logo1.png" height={110} width={160} className='ml-3'/>
+                    <a className='flex justify-center flex-col items-center text-center text-xl font-bold text-green-500'>
+                        <Image src="/logo/logo2.png" height={160} width={160} className='ml-3'/>
                         <p className='-mt-5'>QLess</p>
                     </a>
                 </Link>
@@ -55,13 +55,13 @@ export default function Dashboard (props: IDashboardProps) {
                 <div className='grid grid-cols-12'>
                     <div  className={`flex flex-row-reverse  gap-5 ${sideBar?"col-span-12 ":"col-span-2"}`}>
                         <Link href={"/login"}>
-                            <button className='text-2xl text-slate-600 font-thin'><IoIosLogOut/></button>
+                            <button className='text-2xl text-slate-600 font-thin hover:text-green-500'><IoIosLogOut/></button>
                         </Link>
                         <div className="group inline-block">
                         <button
-                            className="outline-none focus:outline-none  px-3 py-1 bg-white rounded-sm flex items-center min-w-32"
+                            className="outline-none focus:outline-none  px-3 py-1  hover:text-green-500 bg-white rounded-sm flex items-center min-w-32"
                         >
-                            <span className="pr-1 font-semibold flex-1 text-2xl text-slate-600 font-thin"><BsPersonCircle/></span>
+                            <span className="pr-1  hover:text-green-500 font-semibold flex-1 text-2xl text-slate-600 font-thin"><BsPersonCircle/></span>
                             <span>
 
                             </span>
@@ -70,8 +70,12 @@ export default function Dashboard (props: IDashboardProps) {
                                 className="bg-white border rounded-sm transform scale-0 group-hover:scale-100 absolute 
                             transition duration-150 ease-in-out origin-top min-w-40 pt-2"
                             >
-                                <li className="flex flex-row text-slate-600  items-center rounded-sm px-5 py-1 hover:bg-indigo-100 hover:text-indigo-700  gap-1"><BsPersonBadge/>Profile</li>
-                                <li className="flex flex-row text-slate-600   items-center rounded-sm px-5 py-1 hover:bg-indigo-100  hover:text-indigo-700 gap-1"><FiSettings/>Settings</li>
+                                <Link href={'/user/profile'}>
+                                    <li className="flex flex-row text-slate-600  items-center rounded-sm px-5 py-1 hover:bg-green-100 hover:text-green-700  gap-1"><BsPersonBadge/>Profile</li>
+                                </Link>
+                                <Link href={"/user/settings"}>
+                                    <li className="flex flex-row text-slate-600   items-center rounded-sm px-5 py-1 hover:bg-green-100  hover:text-green-700 gap-1"><FiSettings/>Settings</li>
+                                </Link>
                                 <li className="rounded-sm px-3 py-1 hover:bg-gray-100"></li>
                             </ul>
                         </div>

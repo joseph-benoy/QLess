@@ -25,7 +25,7 @@ export default function SignUp (props: ISignUpProps) {
       <main>
 		  <div  className="flex justify-center">
           <div className='rounded-lg grid grid-cols-1 lg:grid-cols-2 lg:w-max lg:shadow-2xl  h-min pr-16 gap-12'>
-              <div className='rounded-l-lg w-96 pt-10 bg-indigo-600 hidden lg:block'>
+              <div className='rounded-l-lg w-96 pt-10 bg-green-500 hidden lg:block'>
 				<div>
 					<Image src="/signup/signup1.png" width={500} height={350}/>
 					<h2 className='text-5xl font-bold text-white text-center'>QLess</h2>
@@ -37,7 +37,7 @@ export default function SignUp (props: ISignUpProps) {
 					<div className="grid justify-center px-8 lg:px-0">
 						
 						<div>
-						<h1 className='text-2xl font-bold text-center text-indigo-600 mb-2'>Sign Up</h1>
+						<h1 className='text-2xl font-bold text-center text-green-500 mb-2'>Sign Up</h1>
 
 						<div className="gap-1 form-floating mb-3 xl:w-96 grid sm:grid-cols-1 lg:grid-cols-2 ">
 							<div>

@@ -24,10 +24,10 @@ export default function Sidebar (props: ISidebarProps) {
     <div ref={sideBarRef} className='h-screen border col-span-2 shadow-2xl transition duration-300 ease-out'>
 		<div className='pt-2 pb-6 pr-3'>
 			<div className='flex justify-end'>
-				<button className='text-indigo-600 text-3xl' onClick={toggleSideBar}><span><BiMenu/></span></button>
+				<button className='text-green-500 text-3xl' onClick={toggleSideBar}><span><BiMenu/></span></button>
 			</div>
 			<Link href='/user'>
-				<a className='flex justify-center flex-col items-center text-center text-xl font-bold text-indigo-600'>
+				<a className='flex justify-center flex-col items-center text-center text-xl font-bold text-green-500'>
 					<Image src="/logo/logo1.png" height={110} width={160} className='ml-3'/>
 					<p className='-mt-5'>QLess</p>
 				</a>

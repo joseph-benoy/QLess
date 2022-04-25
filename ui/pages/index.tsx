@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <div className='container grid grid-cols-1 lg:grid-cols-12 content-center'>
 			<div className='lg:col-span-7 sm:col-span-12 px-5 lg:px-20 flex  flex-col justify-center pt-4'>
 				<div>
-					<h1 className='lg:text-6xl font-bold md:text-3xl text-5xl text-indigo-600'>Events that drive growth start here</h1>
+					<h1 className='lg:text-6xl font-bold md:text-3xl text-5xl text-green-500'>Events that drive growth start here</h1>
 				</div>
 				<div className='lg:pr-16 pr-0 pl-1 pt-5 text-lg text-slate-500 lg:text-slate-600'>
 					<p>
@@ -36,8 +36,8 @@ const Home: NextPage = () => {
 					</Link>
 				</div>
 			</div>
-			<div className='lg:col-span-5 '>
-				<Image src='/hero/hero1.png' width={600} height={500} alt='qless event booking'/>
+			<div className='lg:col-span-5 lg:pt-7'>
+				<Image src='/hero/hero2.svg' width={600} height={500} alt='qless event booking'/>
 			</div>
         </div>
       </main>

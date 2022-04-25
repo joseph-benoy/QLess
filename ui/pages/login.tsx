@@ -19,7 +19,7 @@ export default function Login (props: ILoginProps) {
       <main>
 		  <div  className="grid justify-center items-center mt-10">
           <div className='rounded-lg grid grid-cols-1 lg:grid-cols-2 lg:w-max lg:shadow-2xl  h-min pr-16 gap-12'>
-              <div className='rounded-l-lg w-96 pb-10 bg-indigo-600 hidden lg:block'>
+              <div className='rounded-l-lg w-96 pb-10 bg-green-500 hidden lg:block'>
 				<div >
 					<Image src="/signup/signup1.png" width={500} height={350}/>
 					<h2 className='text-3xl font-bold text-white text-center'>New member?</h2>
@@ -35,7 +35,7 @@ export default function Login (props: ILoginProps) {
 				<form>
 					<div className="grid justify-center px-8 lg:px-0">
 						<div>
-                            <h1 className='text-3xl lg:text-2xl font-bold text-center text-indigo-600 mb-2'>Login</h1>
+                            <h1 className='text-3xl lg:text-2xl font-bold text-center text-green-500 mb-2'>Login</h1>
                                 <div className="form-floating mb-3 xl:w-96">
                                     <label  className="text-gray-700">Email address</label>
                                     <input type="email" className="form-control
@@ -96,7 +96,7 @@ export default function Login (props: ILoginProps) {
                                 </label>
                             </div>
                             <div className='ml-auto'>
-                                <button type='button' className='text-indigo-600'>Forgot password</button>
+                                <button type='button' className='text-green-500'>Forgot password</button>
                             </div>
 						</div>
 
