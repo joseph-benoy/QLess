@@ -57,7 +57,7 @@ export default function SignUp (props: ISignUpProps) {
 								transition
 								ease-in-out
 								m-0
-								focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="First Name"/>
+								focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none" id="floatingInput" placeholder="First Name"/>
 								<div className="text-sm text-gray-500 mt-1">Text helper</div>
 							</div>
 							<div>
@@ -76,7 +76,7 @@ export default function SignUp (props: ISignUpProps) {
 								transition
 								ease-in-out
 								m-0
-								focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="Last Name"/>
+								focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none" id="floatingInput" placeholder="Last Name"/>
 								<div className="text-sm text-gray-500 mt-1">Text helper</div>
 							</div>
 							
@@ -97,7 +97,7 @@ export default function SignUp (props: ISignUpProps) {
 							transition
 							ease-in-out
 							m-0
-							focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingInput" placeholder="name@example.com"/>
+							focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none" id="floatingInput" placeholder="name@example.com"/>
 							<div className="text-sm text-gray-500 mt-1">Text helper</div>
 							</div>
 							<div className="form-floating mb-3 xl:w-96">
@@ -118,7 +118,7 @@ export default function SignUp (props: ISignUpProps) {
                                 transition
                                 ease-in-out
                                 m-0
-                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Password"/>
+                                focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none" id="floatingPassword" placeholder="Password"/>
                                 
                                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
 									<PasswordToggle toggleCb={togglePassword2}/>
@@ -144,7 +144,7 @@ export default function SignUp (props: ISignUpProps) {
                                 transition
                                 ease-in-out
                                 m-0
-                                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="floatingPassword" placeholder="Re-type password"/>
+                                focus:text-gray-700 focus:bg-white focus:border-green-500 focus:outline-none" id="floatingPassword" placeholder="Re-type password"/>
                                 
                                 <div className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
 									<PasswordToggle toggleCb={togglePassword}/>
