@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import * as React from 'react';
 import { useRouter } from 'next/router';
-import {BiHome} from "react-icons/bi";
+import {BiHome, BiMenu} from "react-icons/bi";
 import DashLink from '../components/NavLink/DashLink';
 import { BiWorld } from 'react-icons/bi';
 import Image from 'next/image';
@@ -19,7 +19,10 @@ export default function Sidebar (props: ISidebarProps) {
 
   return (
     <div className='h-screen border col-span-2 shadow-2xl'>
-		<div className='pt-0 pb-6'>
+		<div className='pt-2 pb-6 pr-3'>
+			<div className='flex justify-end'>
+				<button className='text-indigo-600 text-3xl'><span><BiMenu/></span></button>
+			</div>
 			<Link href='/user'>
 				<a className='flex justify-center flex-col items-center text-center text-xl font-bold text-indigo-600'>
 					<Image src="/logo/logo1.png" height={110} width={160} className='ml-3'/>
