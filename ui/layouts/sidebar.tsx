@@ -16,12 +16,15 @@ import {BsCalendar2Event} from "react-icons/bs";
 
 export default function Sidebar (props: ISidebarProps) {
     const router = useRouter();
-
+	const sideBarRef = React.useRef() as React.MutableRefObject<HTMLDivElement>;
+	const toggleSideBar = ()=>{
+		sideBarRef!.current.style.display = "none";
+	}
   return (
-    <div className='h-screen border col-span-2 shadow-2xl'>
+    <div ref={sideBarRef} className='h-screen border col-span-2 shadow-2xl transition duration-300 ease-out'>
 		<div className='pt-2 pb-6 pr-3'>
 			<div className='flex justify-end'>
-				<button className='text-indigo-600 text-3xl'><span><BiMenu/></span></button>
+				<button className='text-indigo-600 text-3xl' onClick={toggleSideBar}><span><BiMenu/></span></button>
 			</div>
 			<Link href='/user'>
 				<a className='flex justify-center flex-col items-center text-center text-xl font-bold text-indigo-600'>
