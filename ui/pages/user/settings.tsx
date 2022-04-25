@@ -11,10 +11,10 @@ export default function OverView (props: IOverViewProps) {
   return (
 	<Dashboard>
 		<Head>
-			<title>QLess | Profile</title>
+			<title>QLess | Settings</title>
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 		</Head>
-	<div className='px-16 pb-14 h-screen'>
+	<div className='px-16 pb-14'>
 		<div className='px-16'>
 			<h3 className='text-3xl text-green-500 text-center mb-2 font-bold'>Profile</h3>
 		</div>
@@ -358,7 +358,7 @@ export default function OverView (props: IOverViewProps) {
 
 			</div>
 		</form>
-		</div>
+	</div>
 	</Dashboard>
   );
 }

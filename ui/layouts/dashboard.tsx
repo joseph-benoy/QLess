@@ -24,8 +24,8 @@ export default function Dashboard (props: IDashboardProps) {
         setSideBar(!sideBar);
 	}
   return (
-    <div className='grid grid-cols-12'>
-        <div className={`${!sideBar?"hidden":"block"} h-screen border col-span-2 shadow-xl transition duration-300 ease-out`}>
+    <div className='grid grid-cols-12  overflow-hidden' >
+        <div  className={`${!sideBar?"hidden":"block"}  h-screen overflow-hidden border col-span-2 shadow-xl transition duration-300 ease-out`}>
             <div className='pt-0 pb-6 '>
                 <Link href='/user'>
                     <a className='flex justify-center flex-col items-center text-center text-xl font-bold text-green-500'>
@@ -50,7 +50,7 @@ export default function Dashboard (props: IDashboardProps) {
             </div>
         </div>
 
-        <div className={`${sideBar?"col-span-10":"col-span-12"} h-screen`}>
+        <div className={`${sideBar?"col-span-10":"col-span-12"} ` }>
             <header className='px-10 py-3'>
                 <div className='grid grid-cols-12'>
                     <div  className={`flex flex-row-reverse  gap-5 ${sideBar?"col-span-12 ":"col-span-2"}`}>
@@ -82,9 +82,11 @@ export default function Dashboard (props: IDashboardProps) {
                     </div>
                 </div>
             </header>
+            <main className='h-screen overflow-y-scroll'>
             {
                 props.children
             }
+            </main>
         </div>
     </div>
   );
