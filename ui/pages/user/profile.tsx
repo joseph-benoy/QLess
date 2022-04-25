@@ -14,7 +14,7 @@ export default function OverView (props: IOverViewProps) {
 			<title>QLess | Profile</title>
 			<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 		</Head>
-	<div className='px-16 pb-14 h-screen'>
+	<div className='px-16 pb-20 h-screen overflow-auto'>
 		<div className='px-16'>
 			<h3 className='text-3xl text-green-500 text-center mb-2 font-bold'>Profile</h3>
 		</div>

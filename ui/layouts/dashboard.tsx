@@ -82,7 +82,7 @@ export default function Dashboard (props: IDashboardProps) {
                     </div>
                 </div>
             </header>
-            <main className='h-screen overflow-auto'>
+            <main className=' pb-20 overflow-auto'>
             {
                 props.children
             }
