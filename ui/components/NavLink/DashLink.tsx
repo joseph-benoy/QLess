@@ -4,21 +4,15 @@ import * as React from 'react';
 export interface IDashLinkProps {
   href:string,
   children?:React.ReactNode,
-  icon?:JSX.Element,
-  label?:string
   active?:boolean
 }
 
 export default function DashLink (props: IDashLinkProps) {
   return (
-    <div>
-      <Link href={props.href}>
-        <button className='inline-block w-full py-4 bg-indigo-600 text-white font-medium   text-base leading-tight   shadow-md hover:bg-indigo-700 hover:shadow-lg focus:bg-indigo-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-800 active:shadow-lg transition duration-150 ease-in-out text-center'>
-			{
-				props.children
-			}
-        </button>
-      </Link>
-    </div>
+    <li>
+    <Link href={props.href}>
+      <a className={`${props.active?"text-indigo-700 text-lg bg-indigo-100":"text-slate-500	"} hover:text-indigo-700  hover:bg-indigo-100 flex flex-row items-center gap-2 text-md lg:px-14 lg:py-3 `}>{props.children}</a>
+    </Link>
+  </li>
   );
 }

@@ -7,7 +7,7 @@ export interface IOverViewProps {
 export default function OverView (props: IOverViewProps) {
   return (
     <Dashboard>
-      <h1>Overview</h1>
+      <h1>All</h1>
     </Dashboard>
   );
 }
