@@ -19,7 +19,7 @@ export default function Alert (props: IInfoProps) {
             {
                 props.children
             }
-            <div className='alert' id="alertbox">
+            <div className={`${props.show?"block":"hidden"} alert`} id="alertbox">
                 <div className={`flex bg-${props.color?props.color:"blue"}-500 px-5 pl-6 py-3 w-fit items-center rounded gap-2 shadow-2xl`}>
                     <p className='text-white font-medium'>{props.text}</p>
                     <CgClose className='text-white font-bold' onClick={close}/>

@@ -9,7 +9,7 @@ export default function OverView (props: IOverViewProps) {
 
   return (
     <>
-    <Alert text='test messaege' color='green' show={true}>
+    <Alert text='' color='green' show={false}>
     <Dashboard>
       <h1>OverView</h1>
     </Dashboard>
