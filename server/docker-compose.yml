@@ -1,12 +1,10 @@
-version: '3.0'
-
+version: '3.3'
 services:
-  mongodb:
-    image: mongo:5.0
+  dev-db:
+    image: postgres:13
     ports:
-      - 27017:27017
-    volumes:
-      - ~/apps/mongo:/data/db
+      - 5434:5432
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=admin@qless
-      - MONGO_INITDB_ROOT_PASSWORD=admin@qless#159
+      POSTGRES_USER: admin@qless
+      POSTGRES_PASSWORD: admin@qless#159
+      POSTGRES_DB: Qless
