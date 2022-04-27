@@ -5,6 +5,6 @@ services:
     ports:
       - 5434:5432
     environment:
-      POSTGRES_USER: admin@qless
-      POSTGRES_PASSWORD: admin@qless#159
+      POSTGRES_USER: qless
+      POSTGRES_PASSWORD: qless159
       POSTGRES_DB: Qless

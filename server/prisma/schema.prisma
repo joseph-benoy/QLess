@@ -9,3 +9,45 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model user{
+	id Int @id @default(autoincrement())
+	firstName String 
+	lastName String
+	email String @unique
+	password String
+	phone Int? @unique
+	docId Int?
+	country String?
+	city String?
+	state String?
+	street String?
+	houseName String?
+	pin String?
+	dob DateTime?
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+	events event[]
+	@@map("Users")
+}
+
+model event{
+	id Int @id @default(autoincrement())
+	title String
+	description String
+	link String?
+	createdBy Int 
+	user user? @relation(fields:[createdBy],references:[id])
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+	bookings booking[]
+	@@map("Events")
+}
+
+model booking{
+	id Int @id @default(autoincrement())
+	eventId Int
+	event event? @relation(fields: [eventId],references: [id])
+	createdAt DateTime @default(now())
+	updatedAt DateTime @updatedAt
+}
