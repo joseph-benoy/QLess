@@ -1,5 +1,5 @@
 import { ForbiddenException, Injectable } from '@nestjs/common';
-import { signUpDto } from './dto';
+import { SignInDto, signUpDto } from './dto';
 import * as argon from 'argon2';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { JwtService } from '@nestjs/jwt';
@@ -48,5 +48,30 @@ export class AuthService {
     return {
       access_token: token,
     };
+  }
+  /**
+   *signIn service
+   * @param dto sign in Dto
+   * @returns access_token
+   */
+  async signIn(dto: SignInDto) {
+    try {
+      const user = await this.prisma.user.findUnique({
+        where: {
+          email: dto.email,
+        },
+      });
+      if (!user) {
+        throw new ForbiddenException(`Email doesn't match`);
+      }
+      const pwMatch = await argon.verify(user.password, dto.password);
+      console.log(pwMatch);
+      if (!pwMatch) {
+        throw new ForbiddenException(`Password doesn't match`);
+      }
+      return this.signToken(user.id, user.email);
+    } catch (error) {
+      throw error;
+    }
   }
 }
