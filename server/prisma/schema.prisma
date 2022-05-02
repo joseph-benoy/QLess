@@ -37,6 +37,9 @@ model event{
 	description String
 	link String?
 	createdBy Int 
+	date DateTime
+	startAccept Int
+	endAccept Int
 	user user? @relation(fields:[createdBy],references:[id])
 	createdAt DateTime @default(now())
 	updatedAt DateTime @updatedAt

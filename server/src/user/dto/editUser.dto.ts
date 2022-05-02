@@ -19,7 +19,7 @@ export class EditUserDto {
   readonly email?: string;
   @IsString()
   @IsOptional()
-  readonly password?: string;
+  password?: string;
   @IsNumber()
   @IsOptional()
   readonly phone?: number;
@@ -43,7 +43,7 @@ export class EditUserDto {
   readonly hosueName?: string;
   @IsNumber()
   @IsOptional()
-  readonly pin?: number;
+  readonly pin?: string;
   @IsDateString()
   @IsOptional()
   readonly dob?: Date;
