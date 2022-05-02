@@ -41,13 +41,20 @@ export class EventService {
       throw error;
     }
   }
-  async eventById(eventId: number) {
+  async eventById(userId: number, eventId: number) {
     try {
       const events = await this.prisma.event.findUnique({
         where: {
           id: eventId,
         },
       });
+      if (events) {
+        const data = {
+          ...events,
+          bookable: userId !== events.createdBy,
+        };
+        return data;
+      }
       return events;
     } catch (error) {
       throw error;

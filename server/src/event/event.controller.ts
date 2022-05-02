@@ -30,7 +30,10 @@ export class EventController {
     return this.EventService.eventsByUserId(userId);
   }
   @Get(':id')
-  getEventBydId(@Param('id', ParseIntPipe) eventId: number) {
-    return this.EventService.eventById(eventId);
+  getEventBydId(
+    @getUser('id') userId: number,
+    @Param('id', ParseIntPipe) eventId: number,
+  ) {
+    return this.EventService.eventById(userId, eventId);
   }
 }
