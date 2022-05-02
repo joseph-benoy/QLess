@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
+import { AuthModule } from 'src/auth/auth.module';
 import { EventController } from './event.controller';
 import { EventService } from './event.service';
 
 @Module({
+  imports: [AuthModule],
   controllers: [EventController],
   providers: [EventService],
 })

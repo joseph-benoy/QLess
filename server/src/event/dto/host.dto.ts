@@ -1,8 +1,11 @@
 import {
   IsDateString,
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsString,
+  Max,
+  Min,
 } from 'class-validator';
 
 export class HostDto {
@@ -18,10 +21,14 @@ export class HostDto {
   @IsDateString()
   @IsNotEmpty()
   readonly date: Date;
-  @IsDateString()
   @IsNotEmpty()
+  @IsNumber()
+  @Max(60)
+  @Min(5)
   readonly startAccept: number;
-  @IsDateString()
   @IsNotEmpty()
+  @IsNumber()
+  @Max(60)
+  @Min(5)
   readonly endAccept: number;
 }

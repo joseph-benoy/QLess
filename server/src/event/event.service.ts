@@ -21,4 +21,24 @@ export class EventService {
       }
     }
   }
+  async allEvents() {
+    try {
+      const events = await this.prisma.event.findMany();
+      return events;
+    } catch (error) {
+      throw error;
+    }
+  }
+  async eventsById(userId: number) {
+    try {
+      const events = await this.prisma.event.findMany({
+        where: {
+          createdBy: userId,
+        },
+      });
+      return events;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
