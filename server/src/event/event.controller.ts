@@ -1,4 +1,12 @@
-import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  ParseIntPipe,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import { getUser } from 'src/auth/decorator';
 import { JwtGaurd } from 'src/auth/guards';
 import { HostDto } from './dto';
@@ -18,7 +26,11 @@ export class EventController {
     return this.EventService.allEvents();
   }
   @Get('host')
-  getEventsById(@getUser('id') userId: number) {
-    return this.EventService.eventsById(userId);
+  getEventsByUserId(@getUser('id') userId: number) {
+    return this.EventService.eventsByUserId(userId);
+  }
+  @Get(':id')
+  getEventBydId(@Param('id', ParseIntPipe) eventId: number) {
+    return this.EventService.eventById(eventId);
   }
 }

@@ -29,11 +29,23 @@ export class EventService {
       throw error;
     }
   }
-  async eventsById(userId: number) {
+  async eventsByUserId(userId: number) {
     try {
       const events = await this.prisma.event.findMany({
         where: {
           createdBy: userId,
+        },
+      });
+      return events;
+    } catch (error) {
+      throw error;
+    }
+  }
+  async eventById(eventId: number) {
+    try {
+      const events = await this.prisma.event.findUnique({
+        where: {
+          id: eventId,
         },
       });
       return events;
