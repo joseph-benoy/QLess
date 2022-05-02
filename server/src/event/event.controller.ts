@@ -17,4 +17,8 @@ export class EventController {
   all() {
     return this.EventService.allEvents();
   }
+  @Get('host')
+  getEventsById(@getUser('id') userId: number) {
+    return this.EventService.eventsById(userId);
+  }
 }
